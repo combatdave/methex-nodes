@@ -1,0 +1,101 @@
+<div class="body">
+    <mat-toolbar>
+        <button [class.active]="mode == 'user'" (click)="userRegistration()">USER REGISTRATION</button>
+        <button [class.active]="mode == 'nodes'" (click)="nodeListing()">NODE LISTING</button>
+        <span>Matic Mumbai Testnet - {{walletAddress}}</span>
+    </mat-toolbar>
+
+
+
+    <div class="diagonal"></div>center
+    <div class="diagonal2"></div>
+
+    <div class="bgtext">
+        Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer
+        Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools
+        Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met
+        Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex Developer Tools Met Hex
+        Developer Tools
+    </div>
+
+    <div class="center" [hidden]="mode != 'user'">
+        <div class="centered-box">
+
+            <div class="subtitle">
+                USER REGISTRATION
+            </div>
+
+            <div *ngIf="userinfo" class="user-info-panel">
+                <div class="title">{{userinfo.name}}</div>
+                <br>
+                <img class="profile-pic" src="{{userinfo.uri}}">
+                <br>
+                <button (click)="changingURI = true;" [hidden]="changingURI==true">CHANGE PICTURE</button>
+                <div [hidden]="!changingURI">
+                    <input type="text" #uri value="{{userinfo.uri}}">
+                    <div style="display: flex;">
+                        <button (click)="changeURI(uri.value);">CONFIRM</button>
+                        <button (click)="changingURI = false;">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!userinfo">
+                USERNAME
+                <input type="text" #username>
+                <br> PROFILE PICTURE
+                <input type="text" #uri>
+
+                <div>
+                    <button (click)="register(username.value, uri.value);">REGISTER</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="center" [hidden]="mode == 'user'">
+        <div class="centered-box">
+
+            <div class="subtitle">
+                NODE LIST
+            </div>
+            <br>
+
+            <table matSort class="node-list">
+                <tr>
+                    <th mat-sort-header="name">Node name</th>
+                    <th mat-sort-header="address">Address</th>
+                    <th mat-sort-header="time">Last seen</th>
+                    <th style="width:100px"></th>
+                </tr>
+
+                <tr *ngFor="let node of nodes" class="node-entry" (click)="joinNode(node);">
+                    <td>{{node.name}}</td>
+                    <td>{{node.ip}}:{{node.port}}</td>
+                    <td>{{node._time * 1000 | date}}</td>
+                    <td style="text-align: center;" (click)="removeNode($event, node);" *ngIf="myNode(node);">🗑️</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="centered-box">
+            <div>
+                <div class="subtitle">
+                    REGISTER NODE
+                </div>
+                <br> NODE NAME
+                <input type="text" #nodename>
+
+                <div>
+                    <button (click)="registerNode(nodename.value);">REGISTER NODE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="userinfo" class="user-info">
+        <span>Wallet user:
+            <br><b>{{userinfo.name}}</b></span>
+        <br>
+        <img class="profile-pic" src="{{userinfo.uri}}">
+    </div>
+</div>

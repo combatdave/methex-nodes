@@ -1,0 +1,307 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    /* height: 100vh; */
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 28px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #eeeeee;
+    letter-spacing: 0px;
+    text-transform: none;
+    background: rgb(15, 29, 34);
+    /* background: url("https://inugamigame.com/wp-content/uploads/2021/11/VoIRl8.jpg"); */
+}
+
+mat-toolbar {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #000000;
+}
+
+.adminbar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #00000088;
+}
+
+.adminbar div {
+    margin: auto;
+}
+
+.adminbar .adminbuttons {
+    width: 100%;
+    display: flex;
+}
+
+.adminbar button {
+    margin: auto;
+    display: block;
+}
+
+button {
+    z-index: 8;
+    background: linear-gradient(90deg, rgb(76, 121, 217) 0%, rgb(51, 79, 134) 100%);
+    font-family: "Nunito Sans";
+    display: inline-block;
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: left;
+    line-height: 30px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-size: 17px;
+    padding-left: 50px;
+    padding-right: 50px;
+    backdrop-filter: none;
+    filter: brightness(100%);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    border-width: 0px;
+    border-radius: 0px;
+    text-transform: none;
+    margin: 10px;
+    display: block;
+}
+
+button.active {
+    box-shadow: rgb(121, 153, 221) 0px 0px 10px 0px;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+.title {
+    z-index: 5;
+    font-family: "Nunito Sans";
+    /* text-transform: uppercase; */
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    font-size: 60px;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    transform: perspective(600px);
+    opacity: 1;
+    visibility: visible;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+    justify-content: center;
+}
+
+.center[hidden] {
+    display: none;
+}
+
+.centered-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background: #141414f0;
+    padding: 10px;
+    min-width: 80%;
+    min-height: 80%;
+    z-index: 20;
+}
+
+.diagonal {
+    z-index: 0;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.897) 100%);
+    color: rgb(0, 0, 0);
+    width: 700px;
+    height: 1018px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 0% 100%);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    position: fixed;
+}
+
+.diagonal2 {
+    z-index: 0;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.897) 100%);
+    width: 700px;
+    height: 1018px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 0% 100%);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(180deg);
+    visibility: visible;
+    position: fixed;
+    right: 0px;
+}
+
+p {
+    z-index: 6;
+    font-family: Inconsolata;
+    display: inline-block;
+    height: auto;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    white-space: normal;
+    width: 800px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 20px;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+}
+
+.subtitle {
+    z-index: 3;
+    font-family: Inconsolata;
+    text-transform: uppercase;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 7px;
+    font-weight: 700;
+    font-size: 15px;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+}
+
+a {
+    color: rgb(76, 217, 100);
+}
+
+input {
+    color: #ffffff;
+    border-color: #ffffff !important;
+}
+
+.node-list {
+    width: 100%;
+}
+
+.node-entry {
+    /* width: 100%; */
+    background: #00000088;
+    padding: 10px;
+    margin: 3px;
+    cursor: pointer;
+    /* display: flex; */
+}
+
+.node-entry:hover {
+    background: #3a3a3a88;
+}
+
+
+/* .node-entry .subtitle {
+    text-align: left !important;
+} */
+
+.node-info {
+    width: 100%;
+    text-align: right;
+}
+
+.bgtext {
+    position: fixed;
+    display: inline;
+    z-index: 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 120px;
+    /* transform: translate(0%, 50%); */
+    color: #ffffff0f;
+    user-select: none;
+    overflow: hidden;
+    text-overflow: clip;
+    max-width: 90%;
+}
+
+.user-info {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: fit-content;
+    padding: 20px;
+    margin: 20px;
+    background: #475b69;
+    border: 1px;
+    border-color: #ffffffff;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.profile-pic {
+    border: 1px solid;
+    border-color: #ffffff;
+    background-color: #00000088;
+}
+
+.user-info-panel {
+    align-content: center;
+    text-align: center;
+}
+
+[hidden] {
+    display: none;
+}

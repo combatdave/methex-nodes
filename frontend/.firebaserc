@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "inugaminft-42b46": {
+      "hosting": {
+        "InugamiNFT": [
+          "inugaminft-42b46"
+        ]
+      }
+    }
+  }
+}
